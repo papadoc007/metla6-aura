@@ -1,0 +1,80 @@
+# --- Environment & secrets ---
+.env
+.env.*
+!.env.example
+
+# --- Node / Remotion dependencies and build artifacts ---
+node_modules/
+dist/
+build/
+.cache/
+
+# --- Remotion render caches ---
+.remotion/
+.remotion-cache/
+*.remotion.json
+remotion-render-*/
+
+# --- Python (backup pipeline, mirrors metla5) ---
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+.venv/
+env/
+.python-version
+.mypy_cache/
+.ruff_cache/
+.pytest_cache/
+
+# --- Video / audio output (assignment REQUIRES the final MP4) ---
+# We commit only the deliverable MP4 in out/; the assignment booklet
+# requires the video to be in the repo. We do NOT commit user-generated
+# clips/ (raw Seedance output that we may regenerate).
+output/
+clips/
+*.mp4
+!out/aura-60s.mp4
+!out/aura-60s-hq.mp4
+!out/aura-preview.mp4
+# Re-ignore the placeholder out/ scratch files that are not the final video
+out/*.tmp
+out/*.log
+out/*.json
+*.mov
+*.webm
+*.mkv
+*.avi
+*.mp3
+*.wav
+*.m4a
+*.flac
+# out/ itself is NOT ignored — we just exclude non-deliverable files inside it
+!out/
+
+# --- Image / static assets cache ---
+*.psd
+*.ai
+*.sketch
+
+# --- Editors / OS ---
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+
+# --- Screenshots: commit the rendered JPG proofs (not the placeholders) ---
+docs/screenshots/*.png
+docs/screenshots/*.gif
+# But include the 3 rendered frames as proof of execution
+!docs/screenshots/04-rendered-frame-1.jpg
+!docs/screenshots/05-rendered-frame-2.jpg
+!docs/screenshots/06-rendered-frame-3.jpg
+
+# --- Local handoff notes ---
+PROJECT_HANDOFF.md

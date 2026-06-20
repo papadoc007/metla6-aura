@@ -1,0 +1,99 @@
+Aura — Suno Style-of-Music Prompt
+=====================================
+
+**Target length**: ~60 seconds (Suno v4 supports up to 4 min — we'll trim to fit the video)
+
+**Style of Music** (paste into Suno's "Style of Music" field):
+
+```
+indie electronic, hopeful mid-tempo, breathy female vocal in Hebrew,
+warm rhodes piano, brushed drums, soft analog synth pads,
+subtle acoustic bass, layered vocal harmonies on chorus,
+intimate, morning-fresh, cinematic but understated,
+nostalgic with a hopeful arc, reverb-heavy outro,
+95 bpm, A minor, vinyl crackle texture,
+no electric guitar distortion, no 808s, no trap hi-hats,
+broadcast quality, radio-ready mix
+```
+
+**Title** (paste into Suno's "Title" field):
+
+```
+Aura — תזכירי לי מי אני
+```
+
+**Lyrics** (paste into Suno's "Lyrics" field):
+
+```
+[Intro - instrumental]
+[Soft rhodes piano, vinyl crackle]
+
+[Verse 1]
+אני קמה בבוקר עוד לפני האור
+מים זורמים לי בדם, אבל הצמא רק גובר
+הראש שלי כבד, הגוף שלי עייף
+מחפשת משהו פשוט שיחזיר אותי לעצמי
+
+[Pre-Chorus]
+ואת מופיעה כמו נשימה
+ברגע ששכחתי לקחת
+צבע מתחלף, קצב משתנה
+והכל מסתדר בלי לבקש
+
+[Chorus]
+Aura, תזכירי לי מי אני
+תראי לי איך זה לחיות בלי לשכוח
+Aura, תגידי לי שאני פה
+ותני לי את הכוח להמשיך — לאט, לאט, לאט
+
+[Verse 2]
+ביום שישי בחדר הכושר עוד לפני השמש
+כל טיפה שנכנסת לי מרגישה כמו ברכה
+המסך שלי זוהר, הצבעים ברורים
+ואת עדיין שם, לא עוזבת לרגע
+
+[Pre-Chorus]
+ואת מופיעה כמו נשימה
+ברגע ששכחתי לקחת
+צבע מתחלף, קצב משתנה
+והכל מסתדר בלי לבקש
+
+[Chorus]
+Aura, תזכירי לי מי אני
+תראי לי איך זה לחיות בלי לשכוח
+Aura, תגידי לי שאני פה
+ותני לי את הכוח להמשיך — לאט, לאט, לאט
+
+[Bridge - stripped back, just vocal + piano + bells]
+מים זורמים בדממה
+כאילו הזמן עצר לרגע
+אני שומעת את הקול שלך
+מבפנים — לא מבחוץ
+
+[Final Chorus - with full harmonies]
+Aura, תזכירי לי מי אני
+תראי לי איך זה לחיות בלי לשכוח
+Aura, תגידי לי שאני פה
+ותני לי את הכוח להמשיך —
+לאט, לאט, לאט
+
+[Outro - fade with reverb tail]
+(soft vocal ooo's over distant ocean wave)
+```
+
+**Notes for Suno generation**:
+- Generate at least 2 variants and pick the best.
+- If the Hebrew pronunciation is off in some words, switch to "Custom" mode and tweak.
+- After generation, trim the audio to exactly 60 seconds using Audacity or ffmpeg.
+- Final audio should be normalized to -14 LUFS for broadcast quality.
+
+**Post-production** (in ffmpeg):
+```bash
+# Trim audio to exactly 60 seconds
+ffmpeg -i aura-v1.mp3 -ss 0 -to 60 -c copy aura-60s.mp3
+
+# Mix with the rendered video
+ffmpeg -i out/aura-60s.mp4 -i aura-60s.mp3 \
+  -c:v copy -c:a aac -b:a 192k \
+  -shortest out/aura-60s-final.mp4
+```

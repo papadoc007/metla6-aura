@@ -1,0 +1,3 @@
+# Pinned for reproducibility. Tested with Python 3.11+ on Windows.
+requests>=2.31.0
+python-dotenv>=1.0.0

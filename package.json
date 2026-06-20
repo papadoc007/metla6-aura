@@ -1,0 +1,27 @@
+{
+  "name": "aura-smart-bottle-video",
+  "version": "1.0.0",
+  "description": "60-second product video for Aura, the AI-powered smart water bottle. Built with Remotion + Claude Code Skill as the final assignment (Metla 6) for the Vibe Coding for Managers course at Bar-Ilan University.",
+  "private": true,
+  "scripts": {
+    "start": "remotion studio",
+    "build": "remotion render src/Root.tsx out/aura-60s.mp4 --comp=Aura60s",
+    "build:preview": "remotion render src/Root.tsx out/aura-preview.mp4 --codec=vp8 --comp=Aura60s",
+    "build:hq": "remotion render src/Root.tsx out/aura-60s-hq.mp4 --crf=18 --comp=Aura60s",
+    "upgrade": "remotion upgrade",
+    "lint": "tsc --noEmit",
+    "verify": "python scripts/verify_structure.py",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@remotion/cli": "4.0.290",
+    "react": "19.0.0",
+    "react-dom": "19.0.0",
+    "remotion": "4.0.290"
+  },
+  "devDependencies": {
+    "@types/react": "19.0.7",
+    "@types/web": "0.0.184",
+    "typescript": "5.7.3"
+  }
+}

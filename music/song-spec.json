@@ -1,0 +1,124 @@
+{
+  "song_id": "aura-brand-song-v1",
+  "title": "Aura",
+  "version": "1.0.0",
+  "bpm": 95,
+  "key": "A minor",
+  "time_signature": "4/4",
+  "duration_target_seconds": 60,
+  "vocal_texture": "breathy female lead, layered harmonies on chorus",
+  "vocal_language": "Hebrew",
+  "vocal_style": [
+    "intimate",
+    "conversational",
+    "warm",
+    "slightly husky"
+  ],
+  "instruments": {
+    "primary": [
+      "warm rhodes piano",
+      "muted brushed drums",
+      "subtle synth pad",
+      "soft acoustic bass"
+    ],
+    "secondary": [
+      "celestial bells (intro and bridge)",
+      "vinyl crackle texture (light)",
+      "tape saturation on master"
+    ],
+    "excluded": [
+      "electric guitar distortion",
+      "heavy 808s",
+      "trap hi-hats"
+    ]
+  },
+  "mood": [
+    "hopeful",
+    "intimate",
+    "nostalgic",
+    "warm",
+    "uplifting",
+    "morning-fresh"
+  ],
+  "energy": "low-to-medium",
+  "dynamics": {
+    "intro": "very soft, ambient pad only",
+    "verse": "piano-led, vocal close-mic",
+    "pre_chorus": "drums enter, subtle build",
+    "chorus": "full band, layered harmonies, peak energy",
+    "bridge": "strip down to vocal + piano + bells",
+    "final_chorus": "loudest moment, then fade out with reverb tail"
+  },
+  "structure": [
+    { "section": "intro", "frames_at_30fps": 240 },
+    { "section": "verse_1", "frames_at_30fps": 240 },
+    { "section": "pre_chorus", "frames_at_30fps": 120 },
+    { "section": "chorus", "frames_at_30fps": 240 },
+    { "section": "verse_2", "frames_at_30fps": 240 },
+    { "section": "pre_chorus", "frames_at_30fps": 120 },
+    { "section": "chorus", "frames_at_30fps": 240 },
+    { "section": "bridge", "frames_at_30fps": 180 },
+    { "section": "final_chorus", "frames_at_30fps": 240 },
+    { "section": "outro_fade", "frames_at_30fps": 240 }
+  ],
+  "lyrics_source": "music/song-lyrics.md",
+  "voice_dubbing": {
+    "present": true,
+    "voice_actor_gender": "female",
+    "voice_actor_age_range": "25-35",
+    "delivery": "conversational, slightly breathy, warm"
+  },
+  "sound_effects": [
+    {
+      "name": "water_pour_into_glass",
+      "placement": "intro + scene_transitions",
+      "duration_ms": 1500
+    },
+    {
+      "name": "soft_notification_chime",
+      "placement": "scene_3_paired_moment",
+      "duration_ms": 800
+    },
+    {
+      "name": "ambient_cafe_murmur",
+      "placement": "scene_4_lifestyle_background",
+      "duration_ms": 8000,
+      "volume": -18
+    },
+    {
+      "name": "heart_beat_subtle",
+      "placement": "bridge",
+      "duration_ms": 4000
+    },
+    {
+      "name": "ocean_wave_far",
+      "placement": "outro_fade",
+      "duration_ms": 4000
+    }
+  ],
+  "production_format": {
+    "delivery_format": "stereo_mp3_320kbps",
+    "loudness_target_lufs": -14,
+    "true_peak_max_dbtp": -1.0,
+    "stems_required": false
+  },
+  "suno_constraints": {
+    "max_style_prompt_chars": 1000,
+    "must_include_genre": true,
+    "must_include_instruments": true,
+    "must_include_mood": true,
+    "must_exclude": [
+      "metal",
+      "rap",
+      "aggressive",
+      "distorted guitars",
+      "explicit"
+    ]
+  },
+  "versioning": {
+    "schema_version": "1.0",
+    "created_with": "Cursor + Claude Code Skill",
+    "created_at": "2026-06-20",
+    "course": "Vibe Coding for Managers — Metla 6"
+  }
+}
