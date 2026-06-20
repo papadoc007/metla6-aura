@@ -4,6 +4,8 @@
 >
 > ✅ **סרטון סופי רונדר: `out/aura-60s.mp4` (7.92 MB, 60 שניות, 1920×1080, h264)**
 > רינדור בוצע ב-Clean Path Workaround ראה סעיף "Render proof" למטה.
+>
+> 🔗 **הגשה ל-GitHub:** [github.com/papadoc007/metla6-aura](https://github.com/papadoc007/metla6-aura)
 
 [![Remotion](https://img.shields.io/badge/Built%20with-Remotion%204-blueviolet)](https://www.remotion.dev/)
 [![React](https://img.shields.io/badge/React-19-61dafb)](https://react.dev/)
