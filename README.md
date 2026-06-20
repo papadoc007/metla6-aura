@@ -2,8 +2,8 @@
 
 > **Vibe Coding for Managers · מטלה 6 (אחרונה)** · אוניברסיטת בר אילן · קיץ 2026
 >
-> ✅ **סרטון סופי רונדר: `out/aura-60s.mp4` (7.92 MB, 60 שניות, 1920×1080, h264)**
-> רינדור בוצע ב-Clean Path Workaround ראה סעיף "Render proof" למטה.
+> ✅ **סרטון סופי רונדר: `out/aura-60s.mp4` (5.55 MB, 60 שניות, 1920×1080, h264 + aac soundtrack)**
+> וידאו מ-Remotion, פסקול מ-Suno (V5, instrumental, "Aura Hydration Theme").
 >
 > 🔗 **הגשה ל-GitHub:** [github.com/papadoc007/metla6-aura](https://github.com/papadoc007/metla6-aura)
 
@@ -24,11 +24,13 @@
 
 | פלט | מיקום |
 |-----|------|
-| 🎥 הסרטון הסופי (60 שניות, MP4) | `out/aura-60s.mp4` (אחרי רינדור) |
+| 🎥 הסרטון הסופי (60 שניות, MP4 + aac) | `out/aura-60s.mp4` |
+| 🎵 פסקול מ-Suno (60 שניות, mp3) | `music/output/aura-soundtrack-60s.mp3` |
+| 🎵 פסקול מקורי מ-Suno (166 שניות, mp3) | `music/output/aura-soundtrack-original.mp3` |
 | 📜 התסריט המלא | `script/script.fountain` |
-| 🎵 מילות השיר | `music/song-lyrics.md` |
-| 🎛️ הגדרות השיר | `music/song-spec.json` |
+| 🎛️ הגדרות השיר (JSON spec) | `music/song-spec.json` |
 | 🎤 פרומפט ל-Suno | `music/suno-prompt.txt` |
+| 🐍 סקריפט יצירת פסקול | `python/generate_soundtrack.py` |
 | 📋 המסמך העסקי | `PRD.md` |
 | 🗺️ תוכנית ההפקה | `PLAN.md` |
 | ✅ רשימת משימות | `TODO.md` |

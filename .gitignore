@@ -33,8 +33,9 @@ env/
 # We commit only the deliverable MP4 in out/; the assignment booklet
 # requires the video to be in the repo. We do NOT commit user-generated
 # clips/ (raw Seedance output that we may regenerate).
-output/
-clips/
+# Match the literal "output" dir at the root only (avoid matching music/output)
+/output/
+/clips/
 *.mp4
 !out/aura-60s.mp4
 !out/aura-60s-hq.mp4
@@ -47,12 +48,14 @@ out/*.json
 *.webm
 *.mkv
 *.avi
+# Audio: commit the soundtrack MP3s in music/output/ (Suno deliverables)
 *.mp3
+!music/output/*.mp3
 *.wav
 *.m4a
 *.flac
 # out/ itself is NOT ignored — we just exclude non-deliverable files inside it
-!out/
+!/out/
 
 # --- Image / static assets cache ---
 *.psd
