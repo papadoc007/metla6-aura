@@ -1,0 +1,17 @@
+Style of Music:
+Lo-fi corporate ambient, spoken word over warm analog synth pad, soft brushed drums at 96 bpm in D minor, upright bass, subtle piano arpeggio, vinyl crackle texture, calm and focused, professional late-night office mood, no vocals, instrumental, cinematic advertisement, clean mix, mastering for -16 LUFS.
+
+Voice:
+Spoken word, low register male or female, calm authoritative delivery, Hebrew language optional.
+
+Negative prompt:
+No distorted guitars, no trap hi-hats, no 808s, no aggressive drums, no dissonant strings, no metal, no rap, no explicit content.
+
+Title:
+TeamPulse Theme
+
+Mood tags:
+focused, calm, professional, late-night, ambient, corporate, underscore
+
+Instrument tags:
+analog synth pad, brushed drums, upright bass, piano, tape hiss

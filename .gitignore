@@ -81,3 +81,23 @@ docs/screenshots/*.gif
 
 # --- Local handoff notes ---
 PROJECT_HANDOFF.md
+
+# --- METLA6.1 (TeamPulse) sub-project ---
+# Apply the same video/audio/binary rules to the nested 6.1 project.
+METLA6.1/node_modules/
+METLA6.1/.remotion/
+METLA6.1/.remotion-cache/
+METLA6.1/dist/
+METLA6.1/build/
+METLA6.1/.cache/
+# Commit the final TeamPulse MP4 deliverable, ignore everything else in its out/
+METLA6.1/out/
+!METLA6.1/out/.gitkeep
+!METLA6.1/out/teampulse-60s.mp4
+# Ignore raw audio in 6.1's music/output (Suno intermediate, large)
+METLA6.1/music/output/*.mp3
+METLA6.1/music/output/*.wav
+!METLA6.1/music/output/.gitkeep
+# Ignore Python caches from 6.1's fallback pipeline
+METLA6.1/python/__pycache__/
+METLA6.1/.venv/

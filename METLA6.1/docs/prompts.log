@@ -1,0 +1,44 @@
+2026-06-22 10:53 — Prompt #1: Project scaffolding
+====================================================
+
+> Create a new Remotion project at c:\Users\User\Documents\בר אילן\LLM בינה מלכואתית\metla6\METLA6.1 for TeamPulse, a 60-second product video. Use Remotion 4, React 19, TypeScript strict. Create folder structure: src/scenes, src/components, script, music, python, docs/screenshots, scripts, out. Add .gitignore, package.json, tsconfig.json, remotion.config.ts, .env.example.
+
+2026-06-22 10:55 — Prompt #2: JSON brief (the contract)
+====================================================
+
+> Following the Vibe Coding Playbook (slide 13), write script/video-spec.json as the binding contract between manager intent and Remotion execution. 3 scenes: opening (20s), problem (20s), solution (20s). Each scene lists its elements (AnimatedTitle, Stat, ActionCard, Cta) with delay_frames. Use Hebrew RTL and a blue-purple corporate palette.
+
+2026-06-22 10:57 — Prompt #3: Scene composition
+====================================================
+
+> Build src/Composition.tsx that reads video-spec.json at build time and maps each scene.id to a React component. Use <Sequence from={idx * 600} durationInFrames={600} name="...">. Throw if no component is mapped for a scene id. Add Root.tsx that registers a Composition with id="TeamPulse60s", 1920x1080 @ 30fps, durationInFrames=1800.
+
+2026-06-22 10:59 — Prompt #4: RTL + CSS architecture
+====================================================
+
+> Following Presentation slide 5 (Mastering Hebrew RTL: CSS Table Architecture), every component must set dir="rtl" lang="he" unicode-bidi="embed" at the container level. For titles use display: table with text-align: center and avoid ul/li. Use Heebo / Rubik font stack. Cancel automatic centering where appropriate.
+
+2026-06-22 11:01 — Prompt #5: Show, Don't Tell — problem scene
+====================================================
+
+> Following Presentation slide 7 (Psychology of Description), SceneProblem must use physical, active descriptions, not abstract emotions. Use 3 big stat numbers (47 / 3 / 0) with concrete labels in Hebrew ("התראות פתוחות", "דדליינים דחופים", "דקות של ריכוז") instead of metaphors. End with a single pain line.
+
+2026-06-22 11:02 — Prompt #6: Suno spec — emotion engineering
+====================================================
+
+> Following Presentation slide 9 (Emotion Engineering in Sound, Suno V5), write music/song-spec.json with: [Mood/Energy]+[Genre]+[Key Instruments] formula. Mood = focused, calm, professional, late-night. Instruments = analog synth pad, brushed drums, upright bass, piano arpeggio. Exclude distorted guitars, trap hi-hats, 808s. Duration 60s. Provide music/song-lyrics.md with Verse/Pre-chorus/Chorus/Bridge in Hebrew (spoken word). Include suno-prompt.txt with Style-of-Music section.
+
+2026-06-22 11:03 — Prompt #7: Windows + Hebrew workaround
+====================================================
+
+> Following metla6/metla6/README.md's render-direct.js pattern, write a render-direct.js that copies the project (without node_modules, .git, out) to C:\metla6-1-clean\, runs npm install there, then renders via @remotion/renderer API to out/teampulse-60s.mp4, then copies the MP4 back to the Hebrew path.
+
+2026-06-22 11:04 — Prompt #8: Verify structure
+====================================================
+
+> Write scripts/verify_structure.py (stdlib only) that checks for PRD.md, PLAN.md, TODO.md, README.md, package.json, tsconfig.json, remotion.config.ts, .gitignore, .env.example, src/Root.tsx, src/Composition.tsx, src/theme.ts, 3 scene files, 4 component files, script.fountain, video-spec.json, song-lyrics.md, song-spec.json, suno-prompt.txt, 4 docs/screenshots files, python/README.md, python/seedance_client.py, python/generate_assets.py, python/requirements.txt. Exit 0 if all present, 1 otherwise.
+
+2026-06-22 11:05 — Prompt #9: Documentation package
+====================================================
+
+> Write PRD.md (with team-manager audience, KPIs, Show-Don't-Tell rationale, references to Presentation slides), PLAN.md (with explicit mapping from each Presentation slide to files in this project), TODO.md (checklist against evaluation table 5), README.md (Hebrew, with mermaid architecture diagram, screenshots section, security/prompt-injection section, cost section, sources section).

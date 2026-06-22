@@ -1,0 +1,79 @@
+{
+  "song_id": "teampulse-theme-v1",
+  "title": "TeamPulse Theme",
+  "version": "1.0.0",
+  "bpm": 96,
+  "key": "D minor",
+  "time_signature": "4/4",
+  "duration_target_seconds": 60,
+  "vocal_texture": "spoken word over ambient pad (no sung vocals)",
+  "vocal_language": "Hebrew",
+  "vocal_style": ["calm", "authoritative", "low energy", "measured"],
+  "instruments": {
+    "primary": [
+      "warm analog synth pad",
+      "soft brushed drums",
+      "muted upright bass",
+      "subtle piano arpeggio"
+    ],
+    "secondary": [
+      "ambient room tone",
+      "soft tape hiss",
+      "vinyl crackle (very light)"
+    ],
+    "excluded": [
+      "distorted guitars",
+      "trap hi-hats",
+      "808s",
+      "dissonant strings"
+    ]
+  },
+  "mood": ["focused", "calm", "professional", "late-night", "corporate-ambient"],
+  "energy": "low-to-medium",
+  "dynamics": {
+    "intro": "pad only, gentle swell",
+    "verse_1": "drums + bass enter, spoken word",
+    "pre_chorus": "build with soft piano arpeggio",
+    "chorus": "full band, layered pads, peak focus",
+    "verse_2": "strip back to pad + voice",
+    "final_chorus": "loudest, then 4s reverb tail",
+    "outro_fade": "soft decay to silence"
+  },
+  "structure": [
+    { "section": "intro", "frames_at_30fps": 240 },
+    { "section": "verse_1", "frames_at_30fps": 240 },
+    { "section": "pre_chorus", "frames_at_30fps": 180 },
+    { "section": "chorus", "frames_at_30fps": 300 },
+    { "section": "verse_2", "frames_at_30fps": 240 },
+    { "section": "outro_fade", "frames_at_30fps": 600 }
+  ],
+  "lyrics_source": "music/song-lyrics.md",
+  "voice_dubbing": {
+    "present": false,
+    "delivery": "spoken word, low register, neutral accent"
+  },
+  "sound_effects": [
+    { "name": "soft_notification_chime", "placement": "scene_3_solutions", "duration_ms": 600 },
+    { "name": "ambient_office_hum", "placement": "scene_2_problem", "duration_ms": 12000, "volume": -22 },
+    { "name": "deep_breath", "placement": "scene_3_intro", "duration_ms": 1500 }
+  ],
+  "production_format": {
+    "delivery_format": "stereo_mp3_320kbps",
+    "loudness_target_lufs": -16,
+    "true_peak_max_dbtp": -1.0,
+    "stems_required": false
+  },
+  "suno_constraints": {
+    "max_style_prompt_chars": 1000,
+    "must_include_genre": true,
+    "must_include_instruments": true,
+    "must_include_mood": true,
+    "must_exclude": ["metal", "rap", "aggressive", "distorted guitars", "explicit"]
+  },
+  "versioning": {
+    "schema_version": "1.0",
+    "created_with": "Cursor + Claude Code Skill",
+    "created_at": "2026-06-22",
+    "course": "Vibe Coding for Managers — Metla 6.1"
+  }
+}

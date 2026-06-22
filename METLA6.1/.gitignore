@@ -1,0 +1,43 @@
+# Node / Remotion
+node_modules/
+dist/
+build/
+.cache/
+.remotion/
+
+# Output videos
+out/*.mp4
+out/*.webm
+!out/.gitkeep
+
+# Music output (large binaries)
+music/output/*.mp3
+music/output/*.wav
+!music/output/.gitkeep
+
+# Environment
+.env
+.env.local
+.env.production
+
+# OS / IDE
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Logs
+*.log
+npm-debug.log*
+render-log.txt
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+
+# Project handoff (per user rule)
+PROJECT_HANDOFF.md
+
+# Temp PDF extraction
+_pdf_extract/

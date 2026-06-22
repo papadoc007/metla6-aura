@@ -7,6 +7,10 @@
 >
 > 🔗 **הגשה ל-GitHub:** [github.com/papadoc007/metla6-aura](https://github.com/papadoc007/metla6-aura)
 
+> ⚠️ **שתי גישות, שני סרטונים — שניהם באותו repo.**
+> ראו גם את [METLA6.1/](./METLA6.1/) — גישה חלופית שניסיתי לאחר קריאת ה-Playbook של הקורס.
+> ה-MP4 של 6.1 הוא [`METLA6.1/out/teampulse-60s.mp4`](./METLA6.1/out/teampulse-60s.mp4) — ראו [METLA6.1/README.md](./METLA6.1/README.md) להסבר מה השתנה ולמה.
+
 [![Remotion](https://img.shields.io/badge/Built%20with-Remotion%204-blueviolet)](https://www.remotion.dev/)
 [![React](https://img.shields.io/badge/React-19-61dafb)](https://react.dev/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-strict-3178c6)](https://www.typescriptlang.org/)
@@ -339,7 +343,44 @@ metla6/
 
 ---
 
-## 🏃 צ'קליסט לפני הגשה
+## 🔀 שתי גישות שניסינו (Aura vs TeamPulse)
+
+המטלה 6 דרשה "סרטון מוצר 60 שניות". ניסיתי **שתי גישות שונות** באותו repo, ושילבתי את שתיהן כדי שהסוכן שבודק את המטלה יוכל להשוות.
+
+| | **גישה 1 — Aura** (root) | **גישה 2 — TeamPulse** ([METLA6.1/](./METLA6.1/)) |
+|---|---|---|
+| **מוצר** | Aura — בקבוק מים חכם (B2C) | TeamPulse — דשבורד AI למנהלים (B2B) |
+| **מבנה** | 6 סצנות × 10 שניות | **3 סצנות × 20 שניות** (פתיח / בעיה / פתרון) |
+| **מקור אמת** | קוד React ידני | **`script/video-spec.json` כחוזה** — קוד React קורא אותו |
+| **הנחיית מדריך** | "סרטון מוצר" (ללא מבנה מוגדר) | **תרגיל שטח** מהממצגת [Presentation-Vibe_Coding_Playbook.pdf](./Presentation-Vibe_Coding_Playbook.pdf) (שקף 14) |
+| **זרימה** | סטטית — כל סצנה באה והולכת | **זורמת** — FlowBackground + crossfades + staggered cards + idle bob |
+| **MP4** | [`out/aura-60s.mp4`](./out/aura-60s.mp4) | [`METLA6.1/out/teampulse-60s.mp4`](./METLA6.1/out/teampulse-60s.mp4) |
+| **מסמכים** | [PRD.md](./PRD.md), [PLAN.md](./PLAN.md), [TODO.md](./TODO.md), [README.md](./README.md) | [METLA6.1/PRD.md](./METLA6.1/PRD.md), [PLAN.md](./METLA6.1/PLAN.md), [TODO.md](./METLA6.1/TODO.md), [README.md](./METLA6.1/README.md) |
+
+### איזו מתאימה יותר לדרישות ה-Playbook?
+
+**גישה 2 (TeamPulse)** מיישמת ישירות את מה שהממצגת והחוברת מלמדים:
+- **JSON brief** כ"חוזה מחייב" (שקף 3 בממצגת) → [`METLA6.1/script/video-spec.json`](./METLA6.1/script/video-spec.json)
+- **3 סצנות** כפי שמופיע בתרגיל השטח (שקף 14) → [`METLA6.1/src/scenes/`](./METLA6.1/src/scenes/)
+- **Show, Don't Tell** — סטטיסטיקות פיזיות (47/3/0), לא רגש מופשט (שקף 7)
+- **RTL עם CSS Table** (שקף 5 + booklet 1.2.1)
+- **Suno emotion engineering** (שקף 9) → [`METLA6.1/music/song-spec.json`](./METLA6.1/music/song-spec.json)
+
+**גישה 1 (Aura)** בנתה "סרטון מוצר" בצורה ישירה בלי לעקוב אחרי המבנה המומלץ בממצגת. היא עדיין עובדת טכנית (MP4 תקין, סרטון איכותי), אבל לא מממשת את ה-Pattern של "JSON brief → Template → Render".
+
+### השוואה ויזואלית
+
+ראו את צילומי המסך של שני הסרטונים:
+
+| | Aura | TeamPulse |
+|---|---|---|
+| צילום 1 | [`docs/screenshots/04-rendered-frame-1.jpg`](./docs/screenshots/04-rendered-frame-1.jpg) | [`METLA6.1/docs/screenshots/01-prompt.png`](./METLA6.1/docs/screenshots/01-prompt.png) |
+| צילום 2 | [`docs/screenshots/05-rendered-frame-2.jpg`](./docs/screenshots/05-rendered-frame-2.jpg) | [`METLA6.1/docs/screenshots/02-render.png`](./METLA6.1/docs/screenshots/02-render.png) |
+| צילום 3 | [`docs/screenshots/06-rendered-frame-3.jpg`](./docs/screenshots/06-rendered-frame-3.jpg) | [`METLA6.1/docs/screenshots/03-output.png`](./METLA6.1/docs/screenshots/03-output.png) |
+
+---
+
+
 
 - [ ] הרצתי `npm install` בהצלחה
 - [ ] הרצתי `npx remotion studio` וראיתי את הסרטון

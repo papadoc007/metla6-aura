@@ -1,0 +1,129 @@
+{
+  "brand": "TeamPulse",
+  "tagline_he": "רק מה שחשוב. אף פעם הרעש.",
+  "tagline_en": "Only what matters. Never the noise.",
+  "fps": 30,
+  "width": 1920,
+  "height": 1080,
+  "duration_seconds": 60,
+  "language": "he",
+  "direction": "rtl",
+  "palette": {
+    "background": "#0E1A2B",
+    "surface": "#16243A",
+    "primary": "#6C63FF",
+    "accent": "#22D3EE",
+    "text": "#F4F6FB",
+    "muted": "#8A98AE"
+  },
+  "typography": {
+    "hebrew_family": "Heebo, Rubik, Segoe UI Hebrew, system-ui, sans-serif",
+    "fallback": "system-ui, -apple-system, Segoe UI, sans-serif"
+  },
+  "scenes": [
+    {
+      "id": "opening",
+      "name": "Opening — Brand reveal",
+      "transition_in": "fade",
+      "transition_out": "slide",
+      "duration_seconds": 20,
+      "background": "radial-gradient(circle at 50% 40%, #16243A 0%, #0E1A2B 70%)",
+      "elements": [
+        {
+          "type": "AnimatedTitle",
+          "text": "TeamPulse",
+          "subtitle": "רק מה שחשוב",
+          "size": "hero",
+          "delay_frames": 0
+        },
+        {
+          "type": "LogoMark",
+          "style": "pulse",
+          "delay_frames": 15
+        }
+      ]
+    },
+    {
+      "id": "problem",
+      "name": "Problem — Noise overload",
+      "transition_in": "slide",
+      "transition_out": "slide",
+      "duration_seconds": 20,
+      "background": "#0E1A2B",
+      "elements": [
+        {
+          "type": "Stat",
+          "value": "47",
+          "label": "התראות פתוחות",
+          "delay_frames": 0
+        },
+        {
+          "type": "Stat",
+          "value": "3",
+          "label": "דדליינים דחופים",
+          "delay_frames": 30
+        },
+        {
+          "type": "Stat",
+          "value": "0",
+          "label": "דקות של ריכוז",
+          "delay_frames": 60
+        },
+        {
+          "type": "PainLine",
+          "text": "למנהל אין זמן. יש לו המון עדכונים.",
+          "delay_frames": 90
+        }
+      ]
+    },
+    {
+      "id": "solution",
+      "name": "Solution — Three priorities",
+      "transition_in": "slide",
+      "transition_out": "fade",
+      "duration_seconds": 20,
+      "background": "linear-gradient(160deg, #0E1A2B 0%, #1E2A4A 100%)",
+      "elements": [
+        {
+          "type": "ActionCard",
+          "title": "תקציב רבעון",
+          "due": "יום שישי",
+          "delay_frames": 0
+        },
+        {
+          "type": "ActionCard",
+          "title": "אסקלציה לקוח",
+          "due": "עכשיו",
+          "delay_frames": 25
+        },
+        {
+          "type": "ActionCard",
+          "title": "לולאת גיוס",
+          "due": "פתוח",
+          "delay_frames": 50
+        },
+        {
+          "type": "AnimatedTitle",
+          "text": "3 פעולות. אפס רעש.",
+          "size": "medium",
+          "delay_frames": 75
+        },
+        {
+          "type": "Cta",
+          "url": "www.teampulse.io",
+          "label": "הצטרפו להרשמה מוקדמת",
+          "delay_frames": 100
+        }
+      ]
+    }
+  ],
+  "audio": {
+    "soundtrack_source": "music/song-spec.json",
+    "voiceover": "none — text-on-screen only (Hebrew)"
+  },
+  "render": {
+    "codec": "h264",
+    "crf": 20,
+    "audio_bitrate": "192k"
+  }
+}

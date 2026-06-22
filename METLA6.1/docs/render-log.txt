@@ -1,0 +1,57 @@
+[2026-06-22 10:53] METLA6.1 scaffold started — directories created under c:\Users\User\Documents\בר אילן\LLM בינה מלכואתית\metla6\METLA6.1
+[2026-06-22 10:55] PRD.md, PLAN.md, TODO.md, README.md written (Hebrew, per booklet 7.2.1)
+[2026-06-22 10:56] script/video-spec.json written — 3 scenes × 20 s, TeamPulse brand, blue-purple palette
+[2026-06-22 10:57] script/script.fountain written — 4 scenes in Fountain format
+[2026-06-22 10:58] music/song-spec.json + song-lyrics.md + suno-prompt.txt written — spoken word, 96 bpm D minor
+[2026-06-22 10:59] src/theme.ts + src/components/{AnimatedTitle,SceneCard,LogoMark}.tsx written
+[2026-06-22 11:00] src/scenes/{SceneOpening,SceneProblem,SceneSolution}.tsx written
+[2026-06-22 11:01] src/Composition.tsx written — reads video-spec.json, maps scene.id → Component via Record<string, React.FC>
+[2026-06-22 11:02] src/Root.tsx written — registerRoot(RemotionRoot) included
+[2026-06-22 11:03] python/{seedance_client,generate_assets,generate_soundtrack}.py + README.md + requirements.txt written
+[2026-06-22 11:04] scripts/verify_structure.py written — 32 required files
+[2026-06-22 11:05] verify_structure.py → OK (32/32 files)
+[2026-06-22 11:06] npm install — added 180 packages in 46 s
+[2026-06-22 11:07] npx remotion render — FAILED (registerRoot not called)
+[2026-06-22 11:08] src/Root.tsx patched to call registerRoot(RemotionRoot) at module bottom
+[2026-06-22 11:09] npx remotion render — FAILED (CLI flag --comp conflicts with positional out)
+[2026-06-22 11:10] render-direct.js rewritten to use @remotion/renderer API (bundle + selectComposition + renderMedia)
+[2026-06-22 11:11] node render-direct.js — OK, teampulse-60s.mp4 written (3,554,257 bytes, 60.05 s, 1920x1080, h264+aac)
+[2026-06-22 11:13] ffmpeg extracted 3 reference frames: opening (5 s), problem (30 s), solution (55 s)
+[2026-06-22 11:14] Screenshots 01/02/03 saved as PNG into docs/screenshots/
+[2026-06-22 11:15] verify_structure.py → OK (32/32 files, all PNGs handled as binary)
+[2026-06-22 11:16] METLA6.1 v1 complete — first render succeeded but felt static
+[2026-06-22 11:31] METLA6.1 v2 — flow overhaul
+  - Added `FlowBackground` component: drifting orbs (radial-gradient), scanning line, sliding grid
+  - Made every component time-aware: enter animation, idle bob/float, exit slide-out
+  - Stat/PainLine now exit (slide-up + fade) before the next one enters → crossfade
+  - ActionCard now has a side-bar accent + idle bob + shadow pulse
+  - AnimatedTitle now reveals word-by-word with stagger; exit slides to the right
+  - LogoMark ECG line now has stroke-dasharray draw animation + a pulse dot at the end
+  - Cta pill gradient now rotates continuously (`${frame * 2}deg`); URL appears letter-by-letter
+  - SceneProblem/SceneSolution added a section index badge (01 הבעיה / 03 הפתרון) bottom-left
+  - SceneSolution's 3 cards are now stacked vertically (Y-stagger fan) instead of all centered
+[2026-06-22 11:34] node render-direct.js — v2 render OK (~2.5 min, 60.05 s, 1920x1080, h264+aac)
+[2026-06-22 11:35] Extracted 8 reference frames at t = 2/8/22/28/35/42/52/58 s
+[2026-06-22 11:36] Visual check:
+  - 02-opening-8s: TeamPulse wordmark + ECG logo + bottom tagline strip
+  - 04-problem-28s: red "3" with "דדליינים דחופים" + section badge "01 הבעיה"
+  - 06-solution-42s: 3 stacked cards (stagger fan) with primary-colored side bars
+  - 08-cta-58s: tagline + gradient pill CTA + typewriter URL "www.teampulse.io"
+[2026-06-22 11:37] Replaced 01/02/03 screenshots with v2 frames; cleaned up v2/ and frames/ folders
+[2026-06-22 11:38] METLA6.1 v2 complete — ready for submission
+
+Render summary (v2):
+- Final MP4: c:\Users\User\Documents\בר אילן\LLM בינה מלכואתית\metla6\METLA6.1\out\teampulse-60s.mp4
+- Size: ~3.4 MiB
+- Duration: 60.05 s
+- Codec: h264 (yuv420p) + aac (192 kbps)
+- Resolution: 1920x1080 @ 30 fps
+- 3 scenes with crossfaded stats, staggered cards, and continuous flow background
+
+Render summary:
+- Final MP4: c:\Users\User\Documents\בר אילן\LLM בינה מלכואתית\metla6\METLA6.1\out\teampulse-60s.mp4
+- Size: 3,554,257 bytes (~3.39 MiB)
+- Duration: 60.053 s
+- Codec: h264 (yuv420p) + aac (192 kbps)
+- Resolution: 1920x1080 @ 30 fps
+- 3 scenes: opening / problem / solution
